@@ -47,4 +47,9 @@
   &:active {
     letter-spacing: 2px;
   }
+  &:disabled {
+    background: grey;
+    color: black;
+    border: none;
+  }
 }
