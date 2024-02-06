@@ -26,6 +26,7 @@
 }
 
 .send-btn {
+  font-size: 16px;
   margin-top: 20px;
   outline: none;
   height: 40px;
@@ -34,14 +35,14 @@
   border-radius: 40px;
   background: #fff;
   border: 2px solid #e1efda;
-  color: #96f5eb;
+  color: #96dcf5;
   letter-spacing: 1px;
   text-shadow: 0;
   cursor: pointer;
   transition: all 0.25s ease;
   font-family: "Montserrat", sans-serif;
   &:hover {
-    color: white;
+    color: #5d3570;
     background: #e1efda;
   }
   &:active {
