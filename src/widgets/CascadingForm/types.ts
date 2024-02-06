@@ -1,25 +1,22 @@
-export type IСountry = "РФ" | "РБ";
-export type ICity = "Москва" | "Сочи" | "Минск" | "Гомель";
-export type IUniversityVariant = "Технический" | "Гуманитарный";
-export type ILivingVariant =
+export type СountryVariant = "РФ" | "РБ";
+export type CityVariant = "Москва" | "Сочи" | "Минск" | "Гомель";
+export type UniversityVariant = "Технический" | "Гуманитарный";
+export type LivingVariant =
   | "Общежития"
   | "Аренда"
   | "Не интересует"
   | "Общежития + Аренда";
-export type IFormFields =
-  | "country"
-  | "city"
-  | "universityVariant"
-  | "livingVariant";
 
-export type IFormData = {
-  country: IСountry;
-  city: ICity;
-  universityVariant: IUniversityVariant;
-  livingVariant: ILivingVariant;
+export type FormData = {
+  country: СountryVariant;
+  city: CityVariant;
+  universityVariant: UniversityVariant;
+  livingVariant: LivingVariant;
 };
 
-export type IFieldData = {
-  name: IFormFields;
-  value: IСountry | ICity | IUniversityVariant | ILivingVariant;
+export type FormFields = keyof FormData;
+
+export type FieldData = {
+  name: FormFields;
+  value: СountryVariant | CityVariant | UniversityVariant | LivingVariant;
 };

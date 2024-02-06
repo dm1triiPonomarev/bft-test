@@ -1,18 +1,18 @@
 import { useUnit } from "effector-react";
 import { countriesList, defaultFormValue } from "./consts";
 import "./index.css";
-import { $formData, setFormData } from "./store";
-import { IFieldData } from "./types";
+import { $formData, setFormFieldData } from "./store";
+import { FieldData } from "./types";
 
 const CascadingForm = () => {
-  const setFieldData = useUnit(setFormData);
+  const setFieldData = useUnit(setFormFieldData);
   const currentFormValue = useUnit($formData);
 
   const setCurrentFieldData = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setFieldData({
       name: e.target.name,
       value: e.target.value,
-    } as IFieldData);
+    } as FieldData);
   };
 
   return (
