@@ -6,17 +6,25 @@ export type LivingVariant =
   | "Аренда"
   | "Не интересует"
   | "Общежития + Аренда";
+export type FacultyVariant = "Математика" | "Физика" | "История" | "Философия";
 
 export type FormData = {
   country: СountryVariant;
   city: CityVariant;
   universityVariant: UniversityVariant;
   livingVariant: LivingVariant;
+  faculty: FacultyVariant;
 };
 
 export type FormFields = keyof FormData;
 
 export type FieldData = {
   name: FormFields;
-  value: СountryVariant | CityVariant | UniversityVariant | LivingVariant;
+  value:
+    | СountryVariant
+    | CityVariant
+    | UniversityVariant
+    | LivingVariant
+    | FacultyVariant
+    | "";
 };
