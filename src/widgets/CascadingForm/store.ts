@@ -1,7 +1,15 @@
 import { createEvent, createStore } from "effector";
 import { FieldData, FormData } from "./types";
 
-export const $formData = createStore<FormData>({} as FormData);
+const defaultStateValue = {
+  country: "",
+  city: "",
+  universityVariant: "",
+  livingVariant: "",
+  faculty: "",
+};
+
+export const $formData = createStore<FormData>(defaultStateValue as FormData);
 export const setFormFieldData = createEvent<FieldData>();
 
 $formData.on(setFormFieldData, (currentState, field) => {
